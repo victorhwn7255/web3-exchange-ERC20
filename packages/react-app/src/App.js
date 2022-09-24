@@ -3,12 +3,14 @@ import { useEthers } from "@usedapp/core";
 import styles from "./styles";
 import { uniswapLogo } from "./assets";
 import { Exchange, Loader, WalletButton } from "./components";
+import { usePools } from "./hooks";
 
 const App = () => {
   //use the useEthers hook
   const { account } = useEthers()
 
-  const poolsLoading = false
+  //use the usePools hook
+  const [loading, pools] = usePools()
 
   return (
     <div className={styles.container}>
@@ -31,10 +33,10 @@ const App = () => {
               <div className="pink_gradient" />
               <div className={styles.exchange}>
               {account ? (
-                  poolsLoading ? (
-                    <Loader title="Loading pools, please wait!" />
+                  loading ? (
+                    <Loader title="Token Paris loading..." />
                   ) : (
-                    <Exchange />
+                    <Exchange pools={pools} />
                   )
                 ) : (
                   <Loader title="Please connect your wallet" />
