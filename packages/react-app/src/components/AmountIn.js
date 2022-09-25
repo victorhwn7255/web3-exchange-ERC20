@@ -28,7 +28,7 @@ export default function AmountIn({ value, onChange, currencyValue, onSelect, cur
         className={styles.amountInput}
       />
 
-      <div className="relative" onClick={() => {setShowList((prevState) => !prevState)}}>
+      <div className="relative" ref={ref} onClick={() => {setShowList(!showList)}}> 
         <button className={styles.currencyButton}>
           {activeCurrency}
           <img 
@@ -41,7 +41,7 @@ export default function AmountIn({ value, onChange, currencyValue, onSelect, cur
         </button>
 
         {showList && (
-          <ul ref={ref} className={styles.currencyList}>
+          <ul className={styles.currencyList}>
             {Object.entries(currencies).map(([token, tokenName], index) => (
               <li
                 key={index}

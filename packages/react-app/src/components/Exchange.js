@@ -31,7 +31,7 @@ export default function Exchange({ pools }) {
   const [toToken, setToToken] = useState("");
   const [resetState, setResetState] = useState(false);
 
-  const fromValueBigNumber = parseUnits(fromValue || "0"); // converse the string to bigNumber
+  const fromValueBigNumber = parseUnits(fromValue || ""); // converse the string to bigNumber
   const availableTokens = getAvailableTokens(pools);
   const counterpartTokens = getCounterpartTokens(pools, fromToken);
   const pairAddress = findPoolByTokens(pools, fromToken, toToken)?.address ?? "";

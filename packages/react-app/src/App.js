@@ -4,6 +4,8 @@ import styles from "./styles";
 import { uniswapLogo } from "./assets";
 import { Exchange, Loader, WalletButton } from "./components";
 import { usePools } from "./hooks";
+import bg_1 from './assets/bg_1.jpg'
+
 
 const App = () => {
   //use the useEthers hook
@@ -12,8 +14,15 @@ const App = () => {
   //use the usePools hook
   const [loading, pools] = usePools()
 
+  const bgImage = {
+    backgroundImage: `url(${bg_1})`,
+    height: '100vh',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
+  }
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={bgImage}>
       <div className={styles.innerContainer}>
         <header className={styles.header}>
           <img

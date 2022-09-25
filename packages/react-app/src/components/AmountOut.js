@@ -32,7 +32,7 @@ export default function AmountOut({ fromToken, toToken, amountIn, pairContract, 
         disabled
       />
 
-      <div className="relative" onClick={() => {setShowList((prevState) => !prevState)}}>
+      <div className="relative" ref={ref} onClick={() => {setShowList(!showList)}}>
         <button className={styles.currencyButton}>
           {activeCurrency}
           <img 
@@ -45,7 +45,7 @@ export default function AmountOut({ fromToken, toToken, amountIn, pairContract, 
         </button>
 
         {showList && (
-          <ul ref={ref} className={styles.currencyList}>
+          <ul className={styles.currencyList}>
             {Object.entries(currencies).map(([token, tokenName], index) => (
               <li
                 key={index}
