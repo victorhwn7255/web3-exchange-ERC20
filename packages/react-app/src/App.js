@@ -127,11 +127,11 @@ const App = () => {
       className="relative flex justify-center min-h-screen sm:px-16 px-6 bg-site-black" 
       style={bgArray[4]} 
     >
-      <img src={side_img} alt="side-img" id="anchor" className="fixed hidden lg:block absolute w-[420px] -top-[10px] left-[30px] z-10 border" />
-      {/* <div className='hidden lg:block' id='eyes'>
-        <img src={eye} alt="eye" className='eye absolute w-[45px] lg:bottom-[180px] lg:right-[320px] xl:bottom-[200px] xl:right-[420px]' />
-        <img src={eye} alt="eye" className='eye absolute w-[45px] lg:bottom-[180px] lg:right-[160px] xl:bottom-[200px] xl:right-[220px]' />
-      </div> */}
+      <img src={side_img} alt="side-img" id="anchor" className="fixed hidden lg:block absolute w-[420px] -top-[10px] left-[30px] z-10" />
+      <div className='hidden lg:block' id='eyes'>
+        <img src={eye} alt="eye" className='eye absolute w-[33px] top-[380px] left-[215px] z-20' />
+        <img src={eye} alt="eye" className='eye absolute w-[33px] top-[365px] left-[275px] z-20' />
+      </div>
       <div className="relative flex justify-between items-center flex-col max-w-[1580px] w-full">
         {/* NAV BAR */}
         <header className="flex flex-row justify-between items-center w-full py-6">
@@ -146,7 +146,7 @@ const App = () => {
           </div>
           {/* toggle bar */}
           <div className="hidden md:flex justify-center items-center w-[45%]">
-            <div className='flex justify-between space-x-1 max-w-[60%] min-w-[400px] p-[6px] rounded-xl bg-site-black shadow
+            <div className='flex justify-between space-x-1 max-w-[60%] min-w-[400px] p-[7px] rounded-xl bg-site-black shadow
             h-[3.5rem] xl:h-[3.6rem] shadow-xl'>
               <div
                 onClick={swapClick} 
