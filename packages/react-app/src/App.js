@@ -5,6 +5,8 @@ import logo from "./assets/marvel_logo.png"
 import { Exchange, Loader, ToggleBar, WalletButton } from "./components";
 import { usePools } from "./hooks";
 import bg_1 from './assets/bg_1.jpg'
+import { MdSwapVerticalCircle } from 'react-icons/md'
+import { FaChartPie } from 'react-icons/fa'
 
 
 const App = () => {
@@ -17,17 +19,17 @@ const App = () => {
   const [swapOpen, setSwapOpen] = useState(true)
   const [poolOpen, setPoolOpen] = useState(false)
 
-  const emailClick = () => {
+  const swapClick = () => {
     setSwapOpen(true)
     setPoolOpen(false)
   }
 
-  const passwordClick = () => {
+  const poolClick = () => {
     setSwapOpen(false)
     setPoolOpen(true)
   }
 
-  const bgImage = {
+  const bgImage1 = {
     backgroundImage: `url(${bg_1})`,
     height: '100vh',
     backgroundSize: 'cover',
@@ -35,12 +37,12 @@ const App = () => {
   }
 
   return (
-    <div className="flex justify-center min-h-screen sm:px-16 px-6 bg-site-black" style={bgImage}>
+    <div className="flex justify-center min-h-screen sm:px-16 px-6 bg-site-black" style={bgImage1}>
       <div className="relative flex justify-between items-center flex-col max-w-[1480px] w-full">
         {/* NAV BAR */}
         <header className="flex flex-row justify-between items-center w-full py-6">
           {/* logo + name */}
-          <div className="flex items-center w-[20%] ">
+          <div className="flex items-center w-full md:w-[20%] ">
             <img
               src={logo}
               alt="uniswap-logo"
@@ -49,35 +51,42 @@ const App = () => {
             <h1 className="text-white ml-3 font-poppins font-black text-xl lg:text-2xl xl:text-3xl tracking-tight hidden sm:block">Marvel Swap 3.0</h1>
           </div>
           {/* toggle bar */}
-          <div className="hidden md:flex border justify-center items-center w-[50%]">
-            <div className='flex justify-between space-x-1 max-w-[60%] min-w-[400px] p-1 rounded-lg bg-site-black shadow
-            h-[3rem] xl:h-[4rem]'>
+          <div className="hidden md:flex justify-center items-center w-[50%]">
+            <div className='flex justify-between space-x-1 max-w-[60%] min-w-[400px] p-[6px] rounded-xl bg-site-black shadow
+            h-[3.5rem] xl:h-[3.6rem]'>
               <div
-                onClick={emailClick} 
-                className= {`duration-200 rounded-lg p-2 w-full cursor-pointer flex justify-center items-center space-x-2
-                    ${swapOpen ? 'bg-site-purple w-[50%] text-gray-50' : 'hover:bg-site-dim2 hover:text-gray-50 w-[50%]'}`}>
+                onClick={swapClick} 
+                className= {`duration-200 flex items-center group rounded-xl p-2 w-full cursor-pointer flex justify-center items-center space-x-1
+                    ${swapOpen ? 'bg-sky-500 w-[60%] text-gray-50' : 'text-gray-100 hover:bg-site-dim2 hover:text-gray-50 w-[40%]'}`}>
+                <MdSwapVerticalCircle size={23} className="group-hover:rotate-180 duraing-500 transition-all" />
                 <h2 className='text-center font-mono font-bold'>Swap</h2>
 
               </div>
               <div
-                onClick={passwordClick} 
-                className= {`duration-200 rounded-lg p-2 w-full cursor-pointer flex justify-center items-center space-x-2 
-                    ${poolOpen ? 'bg-site-purple w-[50%] text-gray-50' : 'hover:bg-site-dim2 hover:text-gray-50 w-[50%]'}`}>
+                onClick={poolClick} 
+                className= {`duration-200 flex items-center group rounded-xl p-2 w-full cursor-pointer flex justify-center items-center space-x-2 
+                    ${poolOpen ? 'bg-sky-500 w-[60%] text-gray-50' : 'text-gray-100 hover:bg-site-dim2 hover:text-gray-50 w-[40%]'}`}>
+                <FaChartPie size={23} className="group-hover:rotate-180 duraing-500 transition-all" />
                 <h2 className='text-center font-mono font-bold'>Pool</h2>
 
               </div>
             </div>
           </div>
+          {/* theme button */}
+          <button className=''>
+            <div className=''></div>
+          </button>
           {/* wallet button */}
-          <div className="w-[20%] flex justify-end">
+          <div className="md:w-[20%] w-full flex justify-end">
             <WalletButton />
           </div>
         </header>
 
         <div className="flex-1 flex justify-start items-center flex-col w-full mt-0">
           {/* <p className="text-white font-poppins font-mono mt-3 text-3xl">World's First Crypto Exchange for Marvel Fans</p> */}
+
           {/* EXCHANGE BOX */}
-          {swapOpen && <div className="mt-10 w-full flex justify-center">
+          {swapOpen && <div className="md:mt-16 mt-[8rem] w-full flex justify-center">
             <div className="relative lg:max-w-[520px] xl:max-w-[700px] min-w-[450px] gradient-border p-[2px] rounded-3xl">
               <div className="pink_gradient" />
               <div className="w-full min-h-[400px] bg-site-black backdrop-blur-[4px] rounded-3xl shadow-card flex px-6 py-10">

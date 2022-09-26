@@ -136,7 +136,7 @@ export default function Exchange({ pools }) {
       <div className="h-[45px] w-[45px] z-10 -mt-5 text-[#CCF4FE] flex justify-center items-center rounded-lg bg-site-black">
         <BsFillArrowDownSquareFill size={28} />
       </div>
-      <div className="-mt-5 mb-8 w-[100%]">
+      <div className="-mt-5 mb-14 w-[100%]">
         <AmountOut 
           fromToken={fromToken}
           toToken={toToken}
@@ -157,7 +157,7 @@ export default function Exchange({ pools }) {
           onClick={onApproveRequested}
           className={`${
             canApprove
-              ? "bg-site-purple text-white hover:bg-fuchsia-700 duration-200"
+              ? "bg-sky-500 text-white hover:bg-sky-700 duration-200"
               : "bg-site-dim2 text-site-dim2"
           } ${styles.actionButton}`}
         >
@@ -169,7 +169,7 @@ export default function Exchange({ pools }) {
           onClick={onSwapRequested}
           className={`${
             canSwap
-              ? "bg-site-purple text-white hover:bg-fuchsia-700 duration-200"
+              ? "bg-sky-500 text-white hover:bg-sky-700 duration-200"
               : "bg-site-dim2 text-site-dim2"
           } ${styles.actionButton}`}
         >
