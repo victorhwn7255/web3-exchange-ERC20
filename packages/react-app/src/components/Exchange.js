@@ -117,8 +117,6 @@ export default function Exchange({ pools }) {
     }
   }, [failureMessage, successMessage])
 
-  console.log("from value: ",fromValue.slice(0,1))
-
 
   return (
     <div className="flex flex-col w-full items-center relative">

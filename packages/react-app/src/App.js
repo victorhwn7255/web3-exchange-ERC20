@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <div className="flex justify-center min-h-screen sm:px-16 px-6 bg-site-black" style={bgImage}>
-      <div className="flex justify-between items-center flex-col max-w-[1480px] w-full">
+      <div className="relative flex justify-between items-center flex-col max-w-[1480px] w-full">
         <header className="flex flex-row justify-between items-center w-full py-6">
           <div className="flex items-center ">
           <img
@@ -56,6 +56,13 @@ const App = () => {
             </div>
           </div>
         </div>
+        <div className="absolute bottom-10 left-3 flex items-center space-x-2">
+          <div className="relative h-4 w-4 md:h-4 md:w-4 my-auto ml-1">
+            <div className='h-full w-full absolute top-0 left-0 bg-[#2dbf00] rounded-full animate-ping'></div>
+            <div className='h-full w-full absolute top-0 left-0 bg-[#2dbf00] rounded-full'></div>
+          </div>
+          <div className="font-mono text-green-400 text-sm">LIVE <span className="text-gray-200">| 6 gwei</span></div>
+      </div>
       </div>
     </div>
   )
