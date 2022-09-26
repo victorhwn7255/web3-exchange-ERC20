@@ -157,7 +157,7 @@ export default function Exchange({ pools }) {
           onClick={onApproveRequested}
           className={`${
             canApprove
-              ? "bg-site-pink text-white hover:bg-pink-700 duration-200"
+              ? "bg-site-purple text-white hover:bg-fuchsia-700 duration-200"
               : "bg-site-dim2 text-site-dim2"
           } ${styles.actionButton}`}
         >
@@ -169,7 +169,7 @@ export default function Exchange({ pools }) {
           onClick={onSwapRequested}
           className={`${
             canSwap
-              ? "bg-site-pink text-white hover:bg-pink-700 duration-200"
+              ? "bg-site-purple text-white hover:bg-fuchsia-700 duration-200"
               : "bg-site-dim2 text-site-dim2"
           } ${styles.actionButton}`}
         >

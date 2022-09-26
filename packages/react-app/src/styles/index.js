@@ -29,7 +29,7 @@ const styles = {
 
   // Exchange
   actionButton:
-    "border-none outline-none px-6 py-2 font-poppins font-bold text-lg rounded-2xl leading-[24px] transition-all min-h-[56px]",
+    "border-none outline-none px-10 py-2 font-poppins font-bold text-lg rounded-2xl leading-[24px] transition-all min-h-[56px]",
   message: "font-poppins font-lg text-white font-bold mt-7",
 
   // WalletButton
