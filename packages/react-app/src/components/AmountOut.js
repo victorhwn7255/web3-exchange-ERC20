@@ -14,6 +14,8 @@ export default function AmountOut({ fromToken, toToken, amountIn, pairContract, 
 
   const amountOut = useAmountsOut(pairContract, amountIn, fromToken, toToken) ?? 0;
 
+  const showAmountOut = formatUnits(amountOut)
+
   useEffect(() => {
     if (Object.keys(currencies).includes(currencyValue)) {
       setActiveCurrency(currencies[currencyValue]);
@@ -27,7 +29,7 @@ export default function AmountOut({ fromToken, toToken, amountIn, pairContract, 
       <input 
         placeholder="0.0"
         type="number"
-        value={formatUnits(amountOut)}
+        value={showAmountOut.substring(0,12)}
         className={styles.amountInput}
         disabled
       />

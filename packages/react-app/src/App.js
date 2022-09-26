@@ -1,7 +1,7 @@
 import React from "react"
 import { useEthers } from "@usedapp/core";
 import styles from "./styles";
-import { uniswapLogo } from "./assets";
+import logo from "./assets/marvel_logo.png"
 import { Exchange, Loader, WalletButton } from "./components";
 import { usePools } from "./hooks";
 import bg_1 from './assets/bg_1.jpg'
@@ -22,25 +22,26 @@ const App = () => {
   }
 
   return (
-    <div className={styles.container} style={bgImage}>
-      <div className={styles.innerContainer}>
-        <header className={styles.header}>
+    <div className="flex justify-center min-h-screen sm:px-16 px-6 bg-site-black" style={bgImage}>
+      <div className="flex justify-between items-center flex-col max-w-[1480px] w-full">
+        <header className="flex flex-row justify-between items-center w-full py-6">
+          <div className="flex items-center ">
           <img
-            src={uniswapLogo}
+            src={logo}
             alt="uniswap-logo"
-            className="w-16 h-16 object-contain"
+            className="xl:w-20 xl:h-20 w-16 h-16 object-contain"
           />
+          <h1 className="text-white ml-3 font-poppins font-black text-xl lg:text-2xl xl:text-3xl tracking-tight hidden sm:block">Marvel Swap 3.0</h1>
+          </div>
           <WalletButton />
         </header>
 
-        <div className={styles.exchangeContainer}>
-          <h1 className={styles.headTitle}>Marvel Swap 3.0</h1>
-          <p className={styles.subTitle}>The Most Secure Platform to Swap ERC20 Tokens</p>
-
-          <div className={styles.exchangeBoxWrapper}>
-            <div className={styles.exchangeBox}>
+        <div className="flex-1 flex justify-start items-center flex-col w-full mt-0">
+          {/* <p className="text-white font-poppins font-mono mt-3 text-3xl">World's First Crypto Exchange for Marvel Fans</p> */}
+          <div className="mt-10 w-full flex justify-center">
+            <div className="relative lg:max-w-[520px] xl:max-w-[700px] min-w-[450px] gradient-border p-[2px] rounded-3xl">
               <div className="pink_gradient" />
-              <div className={styles.exchange}>
+              <div className="w-full min-h-[400px] bg-site-black backdrop-blur-[4px] rounded-3xl shadow-card flex px-6 py-10">
               {account ? (
                   loading ? (
                     <Loader title="Token Paris loading..." />

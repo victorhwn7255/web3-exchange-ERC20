@@ -26,7 +26,7 @@ export default function WalletButton() {
           deactivate();
         }
       }}
-      className={styles.walletButton}
+      className="bg-indigo-500 border-none outline-none px-6 py-2 font-poppins font-bold text-lg text-white rounded-3xl leading-[24px] hover:bg-indigo-700 transition-all duration-300"
     >
       { accountAddress ?  accountAddress : "Connect Wallet" }
     </button>

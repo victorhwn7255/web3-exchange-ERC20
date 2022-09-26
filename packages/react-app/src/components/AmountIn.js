@@ -17,6 +17,7 @@ export default function AmountIn({ value, onChange, currencyValue, onSelect, cur
     else setActiveCurrency("Select");
   }, [currencies, currencyValue]);
 
+
   return (
     <div className={styles.amountContainer}>
       <input 

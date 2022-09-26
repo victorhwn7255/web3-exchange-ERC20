@@ -23,6 +23,7 @@ import {
   getFailureMessage,
   getSuccessMessage,
 } from "../utils";
+import { BsFillArrowDownSquareFill } from 'react-icons/bs'
 
 export default function Exchange({ pools }) {
   const { account } = useEthers();
@@ -116,21 +117,28 @@ export default function Exchange({ pools }) {
     }
   }, [failureMessage, successMessage])
 
+  console.log("from value: ",fromValue.slice(0,1))
+
 
   return (
-    <div className="flex flex-col w-full items-center">
-      <div className="mb-8">
+    <div className="flex flex-col w-full items-center relative">
+      <div className="flex items-center font-mono fixed top-6 left-6">
+        <Balance tokenBalance={fromTokenBalance} />
+      </div>
+      <div className="mt-3">
         <AmountIn 
-          value={fromValue}
+          value={fromValue.slice(0,1) === "0" ? "" : fromValue}
           onChange={onFromValueChange}
           currencyValue={fromToken}
           onSelect={onFromTokenChange}
           currencies={availableTokens}
           isSwapping={isSwapping && hasEnoughBalance}
         />
-        <Balance tokenBalance={fromTokenBalance} />
       </div>
-      <div className="mb-8 w-[100%]">
+      <div className="h-[45px] w-[45px] z-10 -mt-5 text-[#CCF4FE] flex justify-center items-center rounded-lg bg-site-black">
+        <BsFillArrowDownSquareFill size={28} />
+      </div>
+      <div className="-mt-5 mb-8 w-[100%]">
         <AmountOut 
           fromToken={fromToken}
           toToken={toToken}
@@ -140,7 +148,9 @@ export default function Exchange({ pools }) {
           onSelect={onToTokenChange}
           currencies={counterpartTokens}
         />
+        <div className="ml-1 mt-2">
         <Balance tokenBalance={toTokenBalance} />
+        </div>
       </div>
 
       {approvedNeeded && !isSwapping ? (
@@ -149,7 +159,7 @@ export default function Exchange({ pools }) {
           onClick={onApproveRequested}
           className={`${
             canApprove
-              ? "bg-site-pink text-white"
+              ? "bg-site-pink text-white hover:bg-pink-700 duration-200"
               : "bg-site-dim2 text-site-dim2"
           } ${styles.actionButton}`}
         >
@@ -161,7 +171,7 @@ export default function Exchange({ pools }) {
           onClick={onSwapRequested}
           className={`${
             canSwap
-              ? "bg-site-pink text-white"
+              ? "bg-site-pink text-white hover:bg-pink-700 duration-200"
               : "bg-site-dim2 text-site-dim2"
           } ${styles.actionButton}`}
         >
