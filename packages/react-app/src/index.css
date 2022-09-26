@@ -62,3 +62,7 @@ input[type="number"] {
     #EFA53A 99.52%
   );
 }
+
+.logo-text {
+  -webkit-text-stroke: 2px black;
+}
