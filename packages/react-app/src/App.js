@@ -272,8 +272,12 @@ const App = () => {
 
           {/* EXCHANGE BOX */}
           {swapOpen && <div className="md:mt-16 mt-[8rem] w-full flex justify-center">
-            <div className="relative lg:max-w-[580px] xl:max-w-[700px] min-w-[450px] gradient-border p-[2px] rounded-3xl shadow-2xl">
-              <div className="pink_gradient" />
+            <div className="relative lg:max-w-[580px] xl:max-w-[700px] min-w-[450px] exchange-container gradient-border p-[2px] rounded-3xl shadow-2xl overflow-hidden">
+              {/* <div className="pink_gradient" /> */}
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
               <div className="w-full min-h-[400px] bg-site-black backdrop-blur-[4px] rounded-3xl shadow-card flex px-6 py-10">
               {account ? (
                   loading ? (
@@ -285,21 +289,25 @@ const App = () => {
                   <Loader title="Please connect your wallet" />
                 )}
               </div>
-              <div className="blue_gradient" />
+              {/* <div className="blue_gradient" /> */}
             </div>
           </div>}
           {poolOpen && <div className="mt-10 w-full flex justify-center">
-          <div className="relative lg:max-w-[520px] xl:max-w-[700px] min-w-[450px] gradient-border p-[2px] rounded-3xl">
-              <div className="pink_gradient" />
+          <div className="relative lg:max-w-[520px] xl:max-w-[700px] min-w-[450px] exchange-container gradient-border p-[2px] rounded-3xl shadow-2xl overflow-hidden">
+              {/* <div className="pink_gradient" /> */}
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
               <div className="w-full min-h-[400px] bg-site-black backdrop-blur-[4px] rounded-3xl shadow-card flex justify-center items-center px-6 py-10">
                 <h2 className='font-mono'>LP Farming coming soon...</h2>
               </div>
-              <div className="blue_gradient" />
+              {/* <div className="blue_gradient" /> */}
             </div>
           </div>}
 
           {/* built with love */}
-          <div className='font-mono text-xs sm:text-sm mt-auto mb-10 ml-auto md:ml-0 text-center text-gray-50'>
+          <div className='font-mono text-xs sm:text-sm mt-auto mb-8 ml-auto md:ml-0 text-center text-gray-50'>
             <div className='flex items-center group'>
               built with <span className='animate-pulse px-2'>❤️</span> by
               <a href='https://twitter.com/victorhwn' rel='noreferrer' target="_blank" 
@@ -312,7 +320,7 @@ const App = () => {
         </div>
 
         {/* chain status */}
-        <div className="absolute bottom-10 left-3 flex items-center space-x-2">
+        <div className="absolute bottom-8 left-3 flex items-center space-x-2">
           <div className="relative h-4 w-4 md:h-4 md:w-4 my-auto ml-1">
             <div className='h-full w-full absolute top-0 left-0 bg-[#2dbf00] rounded-full animate-ping'></div>
             <div className='h-full w-full absolute top-0 left-0 bg-[#2dbf00] rounded-full'></div>
