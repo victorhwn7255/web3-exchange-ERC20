@@ -250,7 +250,7 @@ const App = () => {
           </div>
 
           {/* RIGHT side */}
-          <div className='md:w-[30%] w-full flex items-center space-x-3'>
+          <div className='md:w-[30%] w-full flex items-center justify-end space-x-3 '>
             {/* theme button */}
             <button className='flex justify-end ml-auto rounded-full ring-2 ring-yellow-400 hover:scale-[0.97] hover:ring-4 hover:ring-emerald-500 duration-300 hidden lg:block'>
               <img 
@@ -271,14 +271,14 @@ const App = () => {
           {/* <p className="text-white font-poppins font-mono mt-3 text-3xl">World's First Crypto Exchange for Marvel Fans</p> */}
 
           {/* EXCHANGE BOX */}
-          {swapOpen && <div className="md:mt-16 mt-[8rem] w-full flex justify-center">
-            <div className="relative lg:max-w-[580px] xl:max-w-[700px] min-w-[450px] exchange-container gradient-border p-[2px] rounded-3xl shadow-2xl overflow-hidden">
+          {swapOpen && <div className="md:mt-16 sm:mt-[8rem] mt-16 w-full flex justify-center">
+            <div className="exchange-container gradient-border relative min-w-[330px] sm:min-w-[450px] md:min-w-[450px] sm:max-w-[520px] md:max-w-[550px] lg:max-w-[580px] xl:max-w-[700px] p-[2px] rounded-3xl shadow-2xl overflow-hidden">
               {/* <div className="pink_gradient" /> */}
               <span></span>
               <span></span>
               <span></span>
               <span></span>
-              <div className="w-full min-h-[400px] bg-site-black backdrop-blur-[4px] rounded-3xl shadow-card flex px-6 py-10">
+              <div className="w-full min-h-[360px] sm:min-h-[420px] bg-site-black backdrop-blur-[4px] rounded-3xl shadow-card flex px-3 sm:px-6 py-3 sm:py-10">
               {account ? (
                   loading ? (
                     <Loader title="Token Paris loading..." />
@@ -293,7 +293,7 @@ const App = () => {
             </div>
           </div>}
           {poolOpen && <div className="mt-10 w-full flex justify-center">
-          <div className="relative lg:max-w-[520px] xl:max-w-[700px] min-w-[450px] exchange-container gradient-border p-[2px] rounded-3xl shadow-2xl overflow-hidden">
+          <div className="exchange-container gradient-border relative min-w-[300px] sm:max-w-[520px] md:max-w-[550px] lg:max-w-[580px] xl:max-w-[700px] p-[2px] rounded-3xl shadow-2xl overflow-hidden">
               {/* <div className="pink_gradient" /> */}
               <span></span>
               <span></span>
@@ -320,12 +320,12 @@ const App = () => {
         </div>
 
         {/* chain status */}
-        <div className="absolute bottom-8 left-3 flex items-center space-x-2">
-          <div className="relative h-4 w-4 md:h-4 md:w-4 my-auto ml-1">
+        <div className="absolute bottom-8 left-0 lg:left-3 flex items-center space-x-2">
+          <div className="relative h-2 w-2 sm:h-3 sm:w-3 md:h-4 md:w-4 my-auto ml-1">
             <div className='h-full w-full absolute top-0 left-0 bg-[#2dbf00] rounded-full animate-ping'></div>
             <div className='h-full w-full absolute top-0 left-0 bg-[#2dbf00] rounded-full'></div>
           </div>
-          <div className="font-mono text-green-400 text-sm">LIVE <span className="text-gray-200">| 6 gwei</span></div>
+          <div className="font-mono text-green-400 text-xs sm:text-sm">LIVE <span className="text-gray-200">| 6 gwei</span></div>
         </div>
         <div>
 

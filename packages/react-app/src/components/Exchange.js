@@ -133,7 +133,7 @@ export default function Exchange({ pools }) {
           isSwapping={isSwapping && hasEnoughBalance}
         />
       </div>
-      <div className="h-[45px] w-[45px] z-10 -mt-5 text-[#CCF4FE] flex justify-center items-center rounded-lg bg-site-black">
+      <div className="h-[45px] w-[45px] z-10 -mt-4 text-[#CCF4FE] flex justify-center items-center rounded-lg bg-site-black">
         <BsFillArrowDownSquareFill size={28} />
       </div>
       <div className="-mt-5 mb-14 w-[100%]">
