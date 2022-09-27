@@ -45,7 +45,7 @@ const styles = {
   // balance
   balance: "w-full text-left font-mono ml-3 text-sm",
   balanceText: "font-mono font-thin text-gray-400",
-  balanceBold: " text-gray-400",
+  balanceBold: " text-gray-400 flex items-center",
 };
 
 export default styles;

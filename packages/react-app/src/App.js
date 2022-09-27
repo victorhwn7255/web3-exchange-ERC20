@@ -253,7 +253,7 @@ const App = () => {
           {/* RIGHT side */}
           <div className='lg:w-[30%] w-full flex items-center justify-end space-x-3 '>
             {/* theme button */}
-            <button className='flex justify-end ml-auto rounded-full ring-2 ring-yellow-400 hover:scale-[0.97] hover:ring-4 hover:ring-emerald-500 duration-300 hidden lg:block'>
+            <button className='flex justify-end ml-auto rounded-full ring-2 ring-yellow-400 hover:scale-[0.97] hover:ring-4 hover:ring-emerald-500 duration-100 hidden lg:block'>
               <img 
                 className='w-[45px] '
                 onClick={() => setThemeNum(Math.floor(Math.random() * 19))}

@@ -121,7 +121,7 @@ export default function Exchange({ pools }) {
   return (
     <div className="flex flex-col w-full items-center relative">
       <div className="flex items-center font-mono fixed top-6 left-6">
-        <Balance tokenBalance={fromTokenBalance} />
+        <Balance tokenBalance={fromTokenBalance} /> 
       </div>
       <div className="mt-3">
         <AmountIn 
