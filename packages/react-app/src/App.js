@@ -217,11 +217,12 @@ const App = () => {
         <header className="flex flex-row justify-between items-center w-full py-6">
 
           {/* LEFT Side */}
-          <div className="flex items-center w-full md:w-[30%] z-20">
+          <div className="flex items-center w-full lg:w-[30%] z-20">
             <img
               src={logo}
               alt="uniswap-logo"
-              className="xl:w-20 xl:h-20 w-16 h-16 object-contain"
+              className="xl:w-20 xl:h-20 sm:w-16 sm:h-16 h-14 w-14 object-contain"
+              // onClick={() => setThemeNum(Math.floor(Math.random() * 19))}
             />
             <h1 className="logo-text text-white ml-3 font-poppins font-black text-xl lg:text-3xl xl:text-4xl tracking-tight hidden sm:block">Marvel Swap</h1>
           </div>
@@ -250,7 +251,7 @@ const App = () => {
           </div>
 
           {/* RIGHT side */}
-          <div className='md:w-[30%] w-full flex items-center justify-end space-x-3 '>
+          <div className='lg:w-[30%] w-full flex items-center justify-end space-x-3 '>
             {/* theme button */}
             <button className='flex justify-end ml-auto rounded-full ring-2 ring-yellow-400 hover:scale-[0.97] hover:ring-4 hover:ring-emerald-500 duration-300 hidden lg:block'>
               <img 
@@ -267,11 +268,40 @@ const App = () => {
           </div>
         </header>
 
+        {/* toggle bar SMALL */}
+        <div className='flex lg:hidden justify-center items-center min-w-[330px] sm:min-w-[450px] mt-10'>
+          <div className='flex justify-between items-center space-x-1 w-[100%] p-[7px] rounded-xl bg-site-black shadow
+            h-[3.3rem] shadow-xl relative'>
+              <div
+                onClick={swapClick} 
+                className= {`duration-200 flex items-center group rounded-xl p-2 w-full cursor-pointer flex justify-center items-center space-x-1
+                    ${swapOpen ? 'bg-sky-500 w-[50%] text-gray-50' : 'text-gray-100 hover:bg-site-dim2 hover:text-gray-50 w-[50%]'}`}>
+                <MdSwapVerticalCircle size={20} className="group-hover:rotate-180 duraing-500 transition-all" />
+                <h2 className='text-center text-sm font-mono font-bold'>Swap</h2>
+              </div>
+              <div className='z-50 h-[55px] w-[60px] sm:h-[60px] sm:w-[65px] rounded-full absolute -top-1 left-[135px] sm:-top-2 sm:left-[190px]'>
+                <img 
+                  className='w-[75px] rounded-full active:brightness-75 duration-200'
+                  onClick={() => setThemeNum(Math.floor(Math.random() * 19))}
+                  src={theme_btn} 
+                  alt="theme button" 
+                />
+              </div>
+              <div
+                onClick={poolClick} 
+                className= {`duration-200 flex items-center group rounded-xl p-2 w-full cursor-pointer flex justify-center items-center space-x-2 
+                    ${poolOpen ? 'bg-sky-500 w-[50%] text-gray-50' : 'text-gray-100 hover:bg-site-dim2 hover:text-gray-50 w-[50%]'}`}>
+                <FaChartPie size={20} className="group-hover:rotate-180 duraing-500 transition-all" />
+                <h2 className='text-center text-sm font-mono font-bold'>Pool</h2>
+              </div>
+          </div>
+        </div>
+
         <div className="flex-1 flex justify-start items-center flex-col w-full mt-0">
           {/* <p className="text-white font-poppins font-mono mt-3 text-3xl">World's First Crypto Exchange for Marvel Fans</p> */}
 
           {/* EXCHANGE BOX */}
-          {swapOpen && <div className="md:mt-16 sm:mt-[8rem] mt-16 w-full flex justify-center">
+          {swapOpen && <div className="lg:mt-16 mt-3 w-full flex justify-center">
             <div className="exchange-container gradient-border relative min-w-[330px] sm:min-w-[450px] md:min-w-[450px] sm:max-w-[520px] md:max-w-[550px] lg:max-w-[580px] xl:max-w-[700px] p-[2px] rounded-3xl shadow-2xl overflow-hidden">
               {/* <div className="pink_gradient" /> */}
               <span></span>
@@ -292,8 +322,8 @@ const App = () => {
               {/* <div className="blue_gradient" /> */}
             </div>
           </div>}
-          {poolOpen && <div className="mt-10 w-full flex justify-center">
-          <div className="exchange-container gradient-border relative min-w-[300px] sm:max-w-[520px] md:max-w-[550px] lg:max-w-[580px] xl:max-w-[700px] p-[2px] rounded-3xl shadow-2xl overflow-hidden">
+          {poolOpen && <div className="lg:mt-16 mt-1 w-full flex justify-center">
+          <div className="exchange-container gradient-border relative min-w-[330px] sm:min-w-[450px] md:min-w-[450px] sm:max-w-[520px] md:max-w-[550px] lg:max-w-[580px] xl:max-w-[700px] p-[2px] rounded-3xl shadow-2xl overflow-hidden">
               {/* <div className="pink_gradient" /> */}
               <span></span>
               <span></span>

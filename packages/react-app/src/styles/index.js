@@ -19,9 +19,9 @@ const styles = {
   amountContainer:
     "flex justify-between items-center flex-row w-full min-w-full bg-site-dim border-[1px] border-transparent hover:ring-2 hover:border-site-dim2 hover:ring-gray-600 min-h-[86px] sm:min-h-[96px] sm:px-6 sm:py-8 p-4 rounded-[20px]",
   amountInput:
-    "w-full flex-1 bg-transparent outline-none font-poppins font-black text-lg sm:text-xl md:text-2xl text-white",
+    "w-full flex-1 bg-transparent outline-none font-poppins font-black text-lg sm:text-xl lg:text-2xl text-white",
   currencyButton:
-    "flex flex-row items-center bg-site-dim2 py-2 px-4 rounded-xl font-mono text-xs sm:text-base md:font-bold text-white",
+    "flex flex-row items-center bg-site-dim2 py-2 px-4 rounded-xl font-mono text-xs sm:text-base lg:font-bold text-white",
   currencyList:
     "absolute z-20 right-0 bg-site-black border-[1px] border-site-dim2 w-full mt-2 rounded-lg min-w-[170px] overflow-hidden",
   currencyListItem:
