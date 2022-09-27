@@ -21,5 +21,8 @@ import bg_17 from './bg_17.jpg'
 import bg_18 from './bg_18.jpg'
 import bg_19 from './bg_19.jpg'
 import bg_20 from './bg_20.jpg'
+import eye from './eye_2.png'
+import side_img from './side_5.png'
+import theme_btn from './theme_btn.png'
 
-export { chevronDown, ethereumLogo, uniswapLogo, bg_1, bg_2, bg_3, bg_4, bg_5, bg_6, bg_7, bg_8, bg_9, bg_10, bg_11, bg_12, bg_13, bg_14, bg_15, bg_16, bg_17, bg_18, bg_19, bg_20 };
+export { chevronDown, ethereumLogo, uniswapLogo, bg_1, bg_2, bg_3, bg_4, bg_5, bg_6, bg_7, bg_8, bg_9, bg_10, bg_11, bg_12, bg_13, bg_14, bg_15, bg_16, bg_17, bg_18, bg_19, bg_20, eye, side_img, theme_btn };
