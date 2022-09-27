@@ -4,7 +4,7 @@ import { useEthers } from "@usedapp/core";
 import logo from "./assets/marvel_logo.png"
 import { Exchange, Loader, WalletButton } from "./components";
 import { usePools } from "./hooks";
-import { bg_1, bg_2, bg_3, bg_4, bg_5, bg_6, bg_7, bg_8, bg_9, bg_10, bg_11, bg_12, bg_13, bg_14, bg_15, bg_16, bg_17, bg_18, bg_19, bg_20, eye, side_img, theme_btn } from './assets';
+import { bg_1, bg_2, bg_3, bg_4, bg_5, bg_6, bg_7, bg_8, bg_9, bg_10, bg_11, bg_12, bg_13, bg_14, bg_15, bg_16, bg_17, bg_18, bg_19, bg_20, eye, side_img, theme_btn, side_4 } from './assets';
 import { MdSwapVerticalCircle } from 'react-icons/md'
 import { FaChartPie } from 'react-icons/fa'
 import { AiOutlineTwitter } from 'react-icons/ai'
@@ -281,7 +281,7 @@ const App = () => {
               </div>
               <div className='z-50 h-[55px] w-[60px] sm:h-[60px] sm:w-[65px] rounded-full absolute -top-1 left-[135px] sm:-top-2 sm:left-[190px]'>
                 <img 
-                  className='w-[75px] rounded-full active:brightness-75 duration-200'
+                  className='w-[75px] rounded-full active:brightness-75 active:ring-4 active:ring-green-400 duration-200'
                   onClick={() => setThemeNum(Math.floor(Math.random() * 19))}
                   src={theme_btn} 
                   alt="theme button" 
@@ -297,8 +297,11 @@ const App = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex justify-start items-center flex-col w-full mt-0">
-          {/* <p className="text-white font-poppins font-mono mt-3 text-3xl">World's First Crypto Exchange for Marvel Fans</p> */}
+        <div className="flex-1 flex justify-start items-center flex-col w-full mt-0 relative">
+          {/* Decos */}
+          <div className='absolute right-0 sm:right-[20px] bottom-[70px] block z-50 lg:hidden'>
+            <img src={side_4} alt="deco" className='w-[200px] sm:w-[300px]' />
+          </div>
 
           {/* EXCHANGE BOX */}
           {swapOpen && <div className="lg:mt-16 mt-3 w-full flex justify-center">
