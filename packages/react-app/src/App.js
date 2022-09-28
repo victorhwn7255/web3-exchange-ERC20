@@ -217,7 +217,7 @@ const App = () => {
         <header className="flex flex-row justify-between items-center w-full py-6">
 
           {/* LEFT Side */}
-          <div className="flex items-center w-full lg:w-[30%] z-20">
+          <div className="flex items-center w-[70%] lg:w-[30%] z-20">
             <img
               src={logo}
               alt="uniswap-logo"
@@ -251,7 +251,7 @@ const App = () => {
           </div>
 
           {/* RIGHT side */}
-          <div className='lg:w-[30%] w-full flex items-center justify-end space-x-3 '>
+          <div className='lg:w-[30%] w-full flex items-center justify-end space-x-3'>
             {/* theme button */}
             <button className='flex justify-end ml-auto rounded-full ring-2 ring-yellow-400 hover:scale-[0.97] hover:ring-4 hover:ring-emerald-500 duration-100 hidden lg:block'>
               <img 
